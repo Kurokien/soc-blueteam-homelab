@@ -39,7 +39,7 @@ A self-built Security Operations Center (SOC) home lab designed to practice dete
 ### 01 — SSH Brute-Force Attack (Linux Victim)
 Dictionary attack against SSH (port 22) using Hydra + rockyou.txt, detected via custom SPL correlating failed-login bursts per source IP/account/minute, with an automated Splunk Alert and a monitoring dashboard.
 
-- 📄 [Incident Report](scenarios/01-ssh-bruteforce/incident-report.pdf)
+- 📄 [Incident Report](scenarios/01-ssh-bruteforce/Incident_Report_SSH_BruteForce.pdf)
 - 🔍 [SPL Detection Query](scenarios/01-ssh-bruteforce/spl-detection.md)
 - 🖼️ [Screenshots](scenarios/01-ssh-bruteforce/screenshots/)
 
@@ -48,7 +48,7 @@ Dictionary attack against SSH (port 22) using Hydra + rockyou.txt, detected via 
 ### 02 — RDP Brute-Force Attack (Windows Victim)
 Dictionary attack against RDP (port 3389) using Hydra, complicated by NLA/TLS handshake behavior and Windows' default Account Lockout Policy — which triggered automatic OS-level containment (Event ID 4740) before any manual analyst response.
 
-- 📄 [Incident Report](scenarios/02-rdp-bruteforce/incident-report.pdf)
+- 📄 [Incident Report](scenarios/02-rdp-bruteforce/Incident_Report_RDP_BruteForce.pdf)
 - 🔍 [SPL Detection Query](scenarios/02-rdp-bruteforce/spl-detection.md)
 - 🖼️ [Screenshots](scenarios/02-rdp-bruteforce/screenshots/)
 
