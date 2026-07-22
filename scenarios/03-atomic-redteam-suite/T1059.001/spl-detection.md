@@ -6,6 +6,29 @@
 
 ---
 
+# T1059.001 — Attack Execution Steps
+
+## Prerequisites
+- Invoke-AtomicRedTeam module cài tại C:\AtomicRedTeam
+- PathToAtomicsFolder = C:\AtomicRedTeam\atomics
+
+## Execution
+Chạy toàn bộ 22 test con của kỹ thuật T1059.001 bằng một lệnh duy nhất:
+
+```powershell
+Invoke-AtomicTest T1059.001
+```
+
+Framework tự động thực thi tuần tự từng test (T1059.001-1 đến -22), mỗi test 
+mô phỏng một biến thể khác nhau của kỹ thuật PowerShell execution — từ 
+download cradle, encoded command, đến NTFS ADS abuse.
+
+## Kết quả tổng quan
+- 6/22 test thực thi thành công (sinh Sysmon Event ID 1 hoặc hành vi tương đương)
+- 16/22 test không thực thi được — nguyên nhân chi tiết xem spl-detection.md 
+  mục 3.5 (Windows Defender blocking) và bảng detection matrix
+
+Xem chi tiết phân tích detection tại spl-detection.md.
 ## 1. Final Detection Rule (SPL)
 
 ```spl
